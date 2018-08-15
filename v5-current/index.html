@@ -1,0 +1,68 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #212331;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #bg-pattern-wrap {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      z-index: 2;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    #animated-grid{
+      position: absolute;
+      z-index: 1;
+    }
+    #dotted-grid{
+      position: absolute;
+      z-index: 4;
+    }
+
+    #bg-pattern-mask {
+      background: url("pattern.png");
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Create Background Pattern -->
+  <!--<canvas id="bg-pattern"></canvas>-->
+
+  <!-- Create Background AnimatedGrid -->
+
+  <canvas id="animated-grid"></canvas>
+
+  <canvas id="dotted-grid"></canvas>
+
+  <div id="bg-pattern-wrap">
+    <div id="bg-pattern-mask"></div>
+  </div>
+
+  <!-- Background Pattern Mask -->
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
